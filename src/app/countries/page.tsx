@@ -1,5 +1,6 @@
 import React from 'react'
 import CountriesDetail from './CountriesDetail'
+import CountriesAPI from './CountriesAPI'
 
 const mockData = [
     {
@@ -29,7 +30,8 @@ const Countries = () => {
     return (
         <>
             <div>Countries here</div>
-            <CountriesDetail countries={mockData} />
+            {/* <CountriesDetail countries={mockData} /> */}
+            <CountriesAPI />
         </>
     )
 }

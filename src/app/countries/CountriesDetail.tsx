@@ -23,7 +23,11 @@ const CountriesDetail = (props: IProps) => {
                         <p>Capital: {country.capital}</p>
                         <p>Population: {country.population}</p>
                         <p>Area: {country.area}</p>
-                        <Image src={country.flag} alt={country.name} />
+                        <Image
+                            width={"200"}
+                            height={"100"}
+                            src={country.flag}
+                            alt={country.name} />
                     </div>
                 );
             })}
