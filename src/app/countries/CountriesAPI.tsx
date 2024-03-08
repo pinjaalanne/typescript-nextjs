@@ -49,8 +49,15 @@ const CountriesAPI = () => {
                         <div key={`${country.capital[0]}${index}`} >
                             <p>Capital: {country.capital[0]}</p>
                             <p>Name: {country.name.common}</p>
-                            <p>{country.name?.nativeName?.ell?.common}</p>
-                            <p>{country.name?.nativeName?.tur?.official}</p>
+                            {Object.entries(country.name?.nativeName).map(([key, value]) => {
+                                return (
+                                    <>
+                                        <p key={key}>{key} : {value.common}</p>
+                                        <p>{value.common}</p>
+                                        <p>{value.official}</p>
+                                    </>
+                                )
+                            })}
                         </div>
                     </Card>
                 )
