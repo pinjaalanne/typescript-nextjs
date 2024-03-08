@@ -49,12 +49,12 @@ const CountriesAPI = () => {
                         <div key={`${country.capital[0]}${index}`} >
                             <p>Capital: {country.capital[0]}</p>
                             <p>Name: {country.name.common}</p>
+                            <p>Official Name: {country.name.official}</p>
                             {Object.entries(country.name?.nativeName).map(([key, value]) => {
                                 return (
                                     <>
                                         <p key={key}>{key} : {value.common}</p>
-                                        <p>{value.common}</p>
-                                        <p>{value.official}</p>
+                                        <p>{key}: {value.official}</p>
                                     </>
                                 )
                             })}
